@@ -2,13 +2,13 @@ export default class Coin{
   constructor(amount) {
     this.amount = amount;
   }
-  changer (amount){
+  changer(amount){
 
     const coins=[0.01, 0.05, 0.1, 0.25];
     var changes=[];
     var coinsReminder=0;
     var currentCoin=0;
-    countCoin(coins.length-1, amount);
+    
   
     //recursive function
     var countCoin=(index, value)=>{ //index=3, value=4.67
@@ -22,6 +22,7 @@ export default class Coin{
         changes.push(Math.ceil(value/currentCoin));
       }
     };
+    countCoin(coins.length-1, amount);
     return changes;//[18, 1, 1, 2]
   }
 }
