@@ -6,7 +6,7 @@ describe('Coin', () => {
   test('should return proper stuff', () => {
     amount=4.67;
     changes=[];
-    let myCoin = new Coin();
+    let add = new Coin();
     changes=myCoin.changer(amount);
     expect(changes).toEqual([18, 1, 1, 2]);
   });
